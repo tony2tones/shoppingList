@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "shoppingList"
+    }
+  },
+  "defaultProject": "shoppingList",
+  "cli": {
+    "analytics": "ebaec203-22f2-484c-952b-c34c8b191f18"
+  }
 }
