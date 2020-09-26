@@ -9,6 +9,6 @@ export class ShoppingListService {
   constructor(private firestore: AngularFirestore) { }
 
   getBasicGroceries() {
-    return this.firestore.collection('ShoppingList/Basic-Groceries').snapshotChanges();
+    return this.firestore.collection('groceries').snapshotChanges();
   }
 }
