@@ -6,27 +6,35 @@
 
   <div class="row" style="margin-top: 25px;">
     <div class="inbox">
-      <div class="item">
-        <input type="checkbox">
-        <p>Eggs</p>
-      </div>
-      <div class="item">
-        <input type="checkbox">
-        <p>Milk.</p>
-      </div>
-      <div class="item">
-        <input type="checkbox">
-        <p>Honey</p>
-      </div>
-      <div class="item">
-        <input type="checkbox">
-        <p>Lentilse</p>
-      </div>
-      <div class="item">
-        <input type="checkbox">
-        <p>Bananas</p>
+      <div *ngFor="let items of list"> {{items}}
+        <div *ngFor="let x of items">
+          <div class="item">
+            <input type="checkbox">
+            <p>{{x}}</p>
+          </div>
+          <div class="item">
+            <input type="checkbox">
+            <p>Milk.</p>
+          </div>
+          <div class="item">
+            <input type="checkbox">
+            <p>Honey</p>
+          </div>
+          <div class="item">
+            <input type="checkbox">
+            <p>Lentilse</p>
+          </div>
+          <div class="item">
+            <input type="checkbox">
+            <p>Bananas</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <button (click)="getShoppingList()"> click me please </button>
+
+  <div *ngIf="show">show this please
+    <div *ngFor="let item of list"> {{item}}</div>
+  </div>
 </div>
