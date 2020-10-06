@@ -6,7 +6,8 @@
 
   <div class="row" style="margin-top: 25px;">
     <div class="inbox">
-      <div *ngFor="let items of list"> {{items}}
+      <div *ngFor="let items of (list | async) | keyvalue"> {{items}}
+        {{items.key}}:{{items.value}}
         <div *ngFor="let x of items">
           <div class="item">
             <input type="checkbox">
