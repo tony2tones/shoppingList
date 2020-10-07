@@ -6,30 +6,11 @@
 
   <div class="row" style="margin-top: 25px;">
     <div class="inbox">
-      <div *ngFor="let items of (list | async) | keyvalue"> {{items}}
-        {{items.key}}:{{items.value}}
-        <div *ngFor="let x of items">
+      <div *ngFor="let items of shoppingList$">
           <div class="item">
             <input type="checkbox">
-            <p>{{x}}</p>
+            <p>{{items}}</p>
           </div>
-          <div class="item">
-            <input type="checkbox">
-            <p>Milk.</p>
-          </div>
-          <div class="item">
-            <input type="checkbox">
-            <p>Honey</p>
-          </div>
-          <div class="item">
-            <input type="checkbox">
-            <p>Lentilse</p>
-          </div>
-          <div class="item">
-            <input type="checkbox">
-            <p>Bananas</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>

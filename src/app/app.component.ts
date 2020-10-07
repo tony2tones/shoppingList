@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ShoppingListService } from './services/shopping-list.service';
+import { Observable, of } from "rxjs";
+
+import { List } from './list.model';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +10,7 @@ import { ShoppingListService } from './services/shopping-list.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  shoppingList$: Observable<List[]>;
   constructor(private shoppingList: ShoppingListService) { }
   title = 'shoppingList';
   response: any;
@@ -35,14 +39,19 @@ export class AppComponent implements OnInit {
   }
 
   putToArray(array) {
-    this.list = array.basic;
+    this.shoppingList$ = array.basic;
     // array['Pesto Chicken'];
+    let items = {}
+    // items.map(this.shoppingList$[0]);
     this.show = true;
     // console.log('The list ', this.list);
-    console.log('The list ', array);
-    console.log('The list ', this.list);
+    console.log('The Obsrve lister ', this.shoppingList$[0]);
     let newArray = [];
     newArray = this.list;
+
+    for (var x in this.shoppingList$) {
+      console.log(x + ": " + this.shoppingList[x]);
+  }
 
     // console.log(newArray[0]);
     // console.log(newArray[2]);
@@ -54,20 +63,15 @@ export class AppComponent implements OnInit {
 
     // var output = test.map(setID);
     // console.log(output);
-    let testArr:any = [];
-    for ( var i=0, n=newArray.length; i<n; i++){
-      for (var j =0; newArray[i].length; j++) {
-        testArr = newArray[i][j] = `test`;
-      }
-      newArray[i] = `id:${i}` + 'name:' + newArray[i]
-     }
+    // let testArr:any = [];
+    // for ( var i=0, n=newArray.length; i<n; i++){
+    //   for (var j =0; newArray[i].length; j++) {
+    //     testArr = newArray[i][j] = `test`;
+    //   }
+    //   newArray[i] = `id:${i}` + 'name:' + newArray[i]
+    //  }
 
-    console.log('testArr ', testArr);
-  }
-
-  setID(item, index) {
-    var key = "id: " + item;
-    return key;
+    // console.log('testArr ', testArr);
   }
 
 }
