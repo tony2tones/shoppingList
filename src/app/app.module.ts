@@ -10,6 +10,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
