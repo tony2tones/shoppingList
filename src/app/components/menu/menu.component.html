@@ -1,0 +1,24 @@
+<div class="container">
+
+    <h1 style="margin-top: 25px;">
+      {{title}}
+    </h1>
+  
+    <div class="row" style="margin-top: 25px;">
+      <div class="inbox">
+        <div *ngFor="let items of shoppingList$">
+            <div class="item">
+              <input type="checkbox">
+              <p>{{items}}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <button (click)="getShoppingList()"> STANDARD GROCERIES theyoukeepforgetting </button>
+    <button (click)="getChickenPesto()"> GROCERIES Chicken basil Pesto Pasta </button>
+  
+    <div *ngIf="show">show this please
+      <div *ngFor="let item of list"> {{item}}</div>
+    </div>
+  </div>
+  

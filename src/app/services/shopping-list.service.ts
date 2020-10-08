@@ -11,4 +11,8 @@ export class ShoppingListService {
   getBasicGroceries() {
     return this.firestore.collection('groceries').snapshotChanges();
   }
+
+  getChickenPesto() {
+    return this.firestore.collection('ShoppingList').snapshotChanges();
+  }
 }
