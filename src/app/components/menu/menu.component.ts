@@ -51,7 +51,7 @@ export class MenuComponent implements OnInit {
 
   putToArray(array) {
     this.title = array.title;
-    this.shoppingList$ = array['Pesto Chicken'];
+    this.shoppingList$ = array.basic;
     // array['Pesto Chicken'];
     let items = {}
     // items.map(this.shoppingList$[0]);
