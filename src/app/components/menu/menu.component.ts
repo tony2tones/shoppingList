@@ -3,6 +3,8 @@ import { Observable } from 'rxjs/internal/Observable';
 import { List } from 'src/app/services/list.model';
 import { ShoppingListService } from 'src/app/services/shopping-list.service';
 
+import { DomSanitizer } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -11,10 +13,14 @@ import { ShoppingListService } from 'src/app/services/shopping-list.service';
 export class MenuComponent implements OnInit {
 
   shoppingList$: Observable<List[]>;
-  constructor(private shoppingList: ShoppingListService) { }
+  safeURL: any;
+  constructor(private shoppingList: ShoppingListService, videoURL: string, private _sanitizer: DomSanitizer) {
+    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(videoURL);
+  }
   title: string;
   response: any;
   responseOther: any;
+  // videoURL: string;
   list: any;
   items: any;
 
@@ -36,22 +42,23 @@ export class MenuComponent implements OnInit {
   }
 
   getChickenPesto() {
-  this.shoppingList.getChickenPesto().subscribe(items => {
-    this.responseOther = items.map(e => {
-      return {
-        list: e.payload.doc.data()
-      };
-    })
-    console.log('THIS IS THE NEW otherARRAY', this.responseOther);
-    this.putToArray(this.responseOther[0]['list']);
-    // this.items = items;
-    // console.log(this.items);
-  });
-}
+    this.shoppingList.getChickenPesto().subscribe(items => {
+      this.responseOther = items.map(e => {
+        return {
+          list: e.payload.doc.data()
+        };
+      })
+      console.log('THIS IS THE NEW otherARRAY', this.responseOther);
+      this.putToArray(this.responseOther[0]['list']);
+      // this.items = items;
+      // console.log(this.items);
+    });
+  }
 
   putToArray(array) {
     this.title = array.title;
     this.shoppingList$ = array.basic;
+    this.videoURL = array.videoUrl;
     // array['Pesto Chicken'];
     let items = {}
     // items.map(this.shoppingList$[0]);
