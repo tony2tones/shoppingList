@@ -1,8 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ShoppingListService } from './services/shopping-list.service';
-import { Observable, of } from "rxjs";
-
-import { List } from './services/list.model';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +6,6 @@ import { List } from './services/list.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
+
 
 }

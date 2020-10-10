@@ -3,7 +3,6 @@ import { Observable } from 'rxjs/internal/Observable';
 import { List } from 'src/app/services/list.model';
 import { ShoppingListService } from 'src/app/services/shopping-list.service';
 
-import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-menu',
@@ -14,13 +13,11 @@ export class MenuComponent implements OnInit {
 
   shoppingList$: Observable<List[]>;
   safeURL: any;
-  constructor(private shoppingList: ShoppingListService, videoURL: string, private _sanitizer: DomSanitizer) {
-    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(videoURL);
-  }
+  constructor (private shoppingList: ShoppingListService) {}
   title: string;
   response: any;
   responseOther: any;
-  // videoURL: string;
+  videoUrl: string;
   list: any;
   items: any;
 
@@ -58,12 +55,12 @@ export class MenuComponent implements OnInit {
   putToArray(array) {
     this.title = array.title;
     this.shoppingList$ = array.basic;
-    this.videoURL = array.videoUrl;
+    this.videoUrl = array.videoUrl;
     // array['Pesto Chicken'];
     let items = {}
     // items.map(this.shoppingList$[0]);
     this.show = true;
-    // console.log('The list ', this.list);
+    console.log('The list ', this.videoUrl);
     console.log('The Obsrve lister ', this.shoppingList$);
     let newArray = [];
     newArray = this.list;
