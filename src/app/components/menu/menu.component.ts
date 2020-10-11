@@ -46,13 +46,27 @@ export class MenuComponent implements OnInit {
         };
       })
       console.log('THIS IS THE NEW otherARRAY', this.responseOther);
-      this.putToArray(this.responseOther[1]['list']);
+      this.putToArrayOther(this.responseOther[1]['list']);
       // this.items = items;
       // console.log(this.items);
     });
   }
 
   putToArray(array) {
+    this.title = array.title;
+    this.shoppingList$ = array.basic;
+    // this.videoUrl = array.videoUrl;
+    // array['Pesto Chicken'];
+    let items = {}
+    // items.map(this.shoppingList$[0]);
+    this.show = true;
+    console.log('The list ', this.videoUrl);
+    console.log('The Obsrve lister ', this.shoppingList$);
+    let newArray = [];
+    newArray = this.list;
+  }
+
+  putToArrayOther(array) {
     this.title = array.title;
     this.shoppingList$ = array.ingredients;
     // this.videoUrl = array.videoUrl;
