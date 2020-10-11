@@ -11,15 +11,19 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
+import { YouTubePlayerModule } from "@angular/youtube-player";
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
+    YouTubePlayerModule,
 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
