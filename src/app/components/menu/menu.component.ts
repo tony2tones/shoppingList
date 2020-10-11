@@ -38,15 +38,15 @@ export class MenuComponent implements OnInit {
     });
   }
 
-  getChickenPesto() {
-    this.shoppingList.getChickenPesto().subscribe(items => {
+  getCurryVeg() {
+    this.shoppingList.getCurryVeg().subscribe(items => {
       this.responseOther = items.map(e => {
         return {
           list: e.payload.doc.data()
         };
       })
       console.log('THIS IS THE NEW otherARRAY', this.responseOther);
-      this.putToArray(this.responseOther[0]['list']);
+      this.putToArray(this.responseOther[1]['list']);
       // this.items = items;
       // console.log(this.items);
     });
@@ -54,8 +54,8 @@ export class MenuComponent implements OnInit {
 
   putToArray(array) {
     this.title = array.title;
-    this.shoppingList$ = array.basic;
-    this.videoUrl = array.videoUrl;
+    this.shoppingList$ = array.ingredients;
+    // this.videoUrl = array.videoUrl;
     // array['Pesto Chicken'];
     let items = {}
     // items.map(this.shoppingList$[0]);

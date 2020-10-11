@@ -12,7 +12,7 @@ export class ShoppingListService {
     return this.firestore.collection('groceries').snapshotChanges();
   }
 
-  getChickenPesto() {
+  getCurryVeg() {
     return this.firestore.collection('ShoppingList').snapshotChanges();
   }
 }
