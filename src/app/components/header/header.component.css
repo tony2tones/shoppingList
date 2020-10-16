@@ -1,0 +1,29 @@
+.header-container {
+  height: 120px;
+  border-radius: 7.5px;
+  background-image: linear-gradient(to right, rgb(92, 114, 185), darkblue);
+  color: white;
+  box-shadow: lightblue;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 0;
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+.sub-title {
+  color: rgb(204, 203, 203);
+  padding-bottom: 10px;
+}
+
+body {
+  margin: 0;
+}
