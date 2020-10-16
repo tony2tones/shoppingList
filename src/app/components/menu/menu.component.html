@@ -1,14 +1,15 @@
 <div class="container">
 
+  <!-- <iframe width="560" height="315" src="{{ videoUrl }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+  <div class="btn-layout">
+    <button class="btn-food" (click)="getShoppingList()"> STANDARD GROCERIES </button>
+    <button class="btn-food" (click)="getCurryVeg()"> GROCERIES Chicken basil Pesto Pasta </button>
+  </div>
   <div class="header-recipe">
     <h1 style="margin-top: 25px;">
       {{title}}
     </h1>
   </div>
-  <!-- <iframe width="560" height="315" src="{{ videoUrl }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-  <button (click)="getShoppingList()"> STANDARD GROCERIES theyoukeepforgetting </button>
-  <button (click)="getCurryVeg()"> GROCERIES Chicken basil Pesto Pasta </button>
-  
   <div class="row" style="margin-top: 25px;">
     <div class="inbox">
       <div *ngFor="let items of shoppingList$">
