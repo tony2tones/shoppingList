@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { YouTubePlayerModule } from "@angular/youtube-player";
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,9 @@ import { HeaderComponent } from './components/header/header.component';
     AppRoutingModule,
     CommonModule,
     YouTubePlayerModule,
+    
+    FormsModule,
+    ReactiveFormsModule,
 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,

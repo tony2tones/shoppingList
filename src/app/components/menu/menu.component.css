@@ -28,6 +28,14 @@
     border-bottom: 0;
   }
 
+  .hide {
+    background: #F9F9F9;
+    text-decoration: line-through;
+  }
+
+  .show {
+    background:white;
+  }
 
   input:checked+p {
     background: #F9F9F9;
@@ -138,6 +146,10 @@
 .header-recipe{
   color: #535558;
   background-color:#efefef;
+}
+
+.list {
+  padding-bottom: 10px;
 }
 
 }

@@ -13,18 +13,45 @@ export class MenuComponent implements OnInit {
 
   shoppingList$: Observable<List[]>;
   safeURL: any;
-  constructor (private shoppingList: ShoppingListService) {}
+  constructor(private shoppingList: ShoppingListService) { }
   title: string;
   response: any;
   responseOther: any;
   videoUrl: string;
   list: any;
   items: any;
-
+  clicked: boolean = false;
   show: boolean = false;
 
   ngOnInit() {
   }
+
+  selectElement(i): void {
+    console.log('this has been clicked ', i);
+    // if (this.clicked) {
+      var element = window.document.getElementsByClassName('item')[i];
+      element.classList.add("hide");
+      var check = element.getElementsByClassName('checky')[i];
+
+      // check.className.includes('input');
+
+    // console.log('this hide');
+    // this.clicked = !this.clicked;
+  // }
+  // if (!this.clicked) {
+  //   var element = window.document.getElementsByClassName('item')[i];
+  //     element.classList.remove("hide");
+  //   console.log('this show when not clicked');
+    // this.clicked = !this.clicked;
+  // }
+  this.clicked = !this.clicked;
+    // else {
+    //   var element = window.document.getElementsByClassName('item')[i];
+    //   element.classList.remove("hide");
+    //   console.log('should remove hide ');
+    // }
+  }
+
 
   getShoppingList() {
     this.shoppingList.getBasicGroceries().subscribe(data => {
