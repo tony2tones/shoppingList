@@ -4,13 +4,13 @@
   </div>
     <div class="panel" *ngIf="showPanel">
       <!-- <p class="sub-title">every dish you want at a touch.</p> -->
-      <h3>Pick your counntry</h3>
+      <h3>Pick your country</h3>
       <select class="form-control" (change)="changeCountry(event)" [(ngModel)]="tester">
         <option disabled>Select Continent</option>
         <option *ngFor="let recipe of shoppingList" (value)="recipe"> {{ recipe }}</option>
       </select>
     </div>
 
-    https://www.itsolutionstuff.com/post/angular-select-dropdown-exampleexample.html
+    <!-- https://www.itsolutionstuff.com/post/angular-select-dropdown-exampleexample.html -->
 
 </div>

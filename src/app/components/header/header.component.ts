@@ -8,9 +8,9 @@ import { ShoppingsModel } from '../models/shoppinglist.model'
 })
 export class HeaderComponent implements OnInit {
   showPanel: boolean = false;
+  tester:any;
   shoppingList: any = ['ItSolutionStuff.com', 'HDTuto.com', 'Nicesnippets.com']
   constructor() { }
-
 
   ngOnInit(): void {
   }
