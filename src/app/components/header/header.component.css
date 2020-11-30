@@ -2,7 +2,7 @@
   min-height: 120px;
   border-radius: 7.5px;
   background-image: linear-gradient(to right, rgb(92, 114, 185), darkblue);
-  color: rgb(184, 180, 180);
+  color: white;
   box-shadow: lightblue;
   overflow: hidden;
   background-color: rgb(172, 96, 96);
@@ -10,6 +10,10 @@
   top: 0;
   width: 100%;
   z-index: 1;
+}
+
+.title:hover {
+  cursor: pointer;
 }
 
 .title {
@@ -20,7 +24,6 @@
 }
 
 .sub-title {
-  color: rgb(204, 203, 203);
   padding-bottom: 10px;
 }
 
@@ -28,6 +31,13 @@ body {
   margin: 0;
 }
 
-.dropdown{
+.dropdown {
   padding: 25px;
+}
+.fa {
+  transition: all .25s linear;
+}
+
+.rotate {
+  transform: rotate(90deg);
 }
