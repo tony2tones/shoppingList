@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 
 import { ShoppingListService } from './services/shopping-list.service';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
-import { YouTubePlayerModule } from "@angular/youtube-player";
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -28,7 +28,7 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    YouTubePlayerModule,
+    FontAwesomeModule,
     
     FormsModule,
     ReactiveFormsModule,
