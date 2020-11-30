@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dropdown.component.css']
 })
 export class DropdownComponent implements OnInit {
-
+  tester:any;
+  shoppingList: any = ['ItSolutionStuff.com', 'HDTuto.com', 'Nicesnippets.com']
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeCountry() {
+    console.log(this.tester);
   }
 
 }
