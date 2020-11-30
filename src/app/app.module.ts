@@ -15,12 +15,14 @@ import { YouTubePlayerModule } from "@angular/youtube-player";
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    HeaderComponent
+    HeaderComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
