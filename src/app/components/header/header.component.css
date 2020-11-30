@@ -35,6 +35,7 @@ body {
   padding: 25px;
 }
 .fa {
+  padding: 10px;
   transition: all .25s linear;
 }
 
