@@ -10,19 +10,23 @@
       {{title}}
     </h4>
   </div>
-  <div class="row">
-    <div class="inbox">
-      <div *ngFor="let items of shoppingList$">
-        <div class="item">
-          <input type="checkbox">
-          <p>{{items}}</p>
+  <div class="list">
+    <div class="row">
+      <div class="inbox">
+        <div *ngFor="let items of shoppingList$ ; let i = index" (click)="selectElement(i)">
+          <div class="item">
+            <input class="checky" type="checkbox">
+            <p>{{ items }}</p>
+            <!-- <p [ngClass]="{'hide': clicked === true, 'show': !clicked === false}" >{{items}}</p> -->
+            <!-- <p [ngClass]="{show: clicked, hide: !clicked}">{{items}}</p> -->
+          </div>
         </div>
       </div>
     </div>
   </div>
 
 
-  <div *ngIf="show">show this please
+  <!-- <div *ngIf="show">show this please
     <div *ngFor="let item of list"> {{item}}</div>
-  </div>
+  </div> -->
 </div>

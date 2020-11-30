@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingsModel } from '../models/shoppinglist.model'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-header',
@@ -6,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  faCoffee = faCoffee;
+  showPanel: boolean = false;
+  tester:any;
+  shoppingList: any = ['ItSolutionStuff.com', 'HDTuto.com', 'Nicesnippets.com']
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  togglePanel(): void {
+    this.showPanel = !this.showPanel;
+  }
+
+  changeCountry(event) {
+    console.log(event);
+  }
 }
