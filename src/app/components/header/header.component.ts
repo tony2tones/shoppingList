@@ -11,9 +11,8 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 export class HeaderComponent implements OnInit {
   faCoffee = faCoffee;
   showPanel: boolean = false;
+  selectedItem: string;
   tester:any;
-  shoppingList: any = ['ItSolutionStuff.com', 'HDTuto.com', 'Nicesnippets.com']
-  constructor() { }
 
   ngOnInit(): void {
   }
@@ -22,7 +21,9 @@ export class HeaderComponent implements OnInit {
     this.showPanel = !this.showPanel;
   }
 
-  changeCountry(event) {
-    console.log(event);
+  dropdownState($event) {
+    console.log('this should gimme all them deets ',$event);
+    this.showPanel = false;
+    this.selectedItem = 'Selected option: ' + $event;
   }
 }

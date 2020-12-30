@@ -1,6 +1,6 @@
 <div class="dropdown">
     <h3>Pick your dish</h3>
-    <select class="form-control" (change)="changeCountry()" [(ngModel)]="tester" placeholder="Select a dish">
+    <select class="form-control" (change)="selectedList()" [(ngModel)]="tester" placeholder="Select a dish">
       <option disabled>Select a dish</option>
       <option *ngFor="let recipe of shoppingList" (value)="recipe"> {{ recipe }}</option>
     </select>
