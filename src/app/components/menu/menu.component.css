@@ -4,7 +4,7 @@
   .container {
     margin-top: 120px;
     font-family: sans-serif;
-
+    display: block;
     background: #efefef;
     text-align: center;
     /* background: #ffc600; */
