@@ -13,8 +13,6 @@ export class HeaderComponent implements OnInit {
   showPanel: boolean = false;
   selectedItem: string;
   tester:any;
-  shoppingList: any = ['ItSolutionStuff.com', 'HDTuto.com', 'Nicesnippets.com']
-  constructor() { }
 
   ngOnInit(): void {
   }
