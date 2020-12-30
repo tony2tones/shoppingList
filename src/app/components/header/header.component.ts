@@ -11,6 +11,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 export class HeaderComponent implements OnInit {
   faCoffee = faCoffee;
   showPanel: boolean = false;
+  selectedItem: string;
   tester:any;
   shoppingList: any = ['ItSolutionStuff.com', 'HDTuto.com', 'Nicesnippets.com']
   constructor() { }
@@ -28,5 +29,7 @@ export class HeaderComponent implements OnInit {
 
   dropdownState($event) {
     console.log('this should gimme all them deets ',$event);
+    this.showPanel = false;
+    this.selectedItem = $event;
   }
 }
