@@ -23,13 +23,9 @@ export class HeaderComponent implements OnInit {
     this.showPanel = !this.showPanel;
   }
 
-  changeCountry(event) {
-    console.log(event);
-  }
-
   dropdownState($event) {
     console.log('this should gimme all them deets ',$event);
     this.showPanel = false;
-    this.selectedItem = $event;
+    this.selectedItem = 'Selected option: ' + $event;
   }
 }
