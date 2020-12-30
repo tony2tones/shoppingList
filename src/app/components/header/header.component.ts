@@ -25,4 +25,8 @@ export class HeaderComponent implements OnInit {
   changeCountry(event) {
     console.log(event);
   }
+
+  dropdownState($event) {
+    console.log('this should gimme all them deets ',$event);
+  }
 }

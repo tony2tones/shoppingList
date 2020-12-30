@@ -16,7 +16,7 @@ export class DropdownComponent implements OnInit {
 
   selectedList() {
     this.messageBus.emit(this.tester);
-    console.log(this.tester);
+    // console.log(this.tester);
   }
 
 }
