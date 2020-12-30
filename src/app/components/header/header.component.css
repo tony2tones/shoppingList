@@ -10,6 +10,7 @@
   top: 0;
   width: 100%;
   z-index: 1;
+  transition: all .25s linear;
 }
 
 .title:hover {
@@ -37,6 +38,10 @@ body {
 .fa {
   padding: 10px;
   transition: all .25s linear;
+}
+
+.panel {
+  
 }
 
 .rotate {

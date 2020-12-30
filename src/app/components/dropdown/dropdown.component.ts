@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dropdown',
@@ -6,14 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dropdown.component.css']
 })
 export class DropdownComponent implements OnInit {
-  tester:any;
-  shoppingList: any = ['ItSolutionStuff.com', 'HDTuto.com', 'Nicesnippets.com']
-  constructor() { }
+  tester:string;
+  @Output() messageBus = new EventEmitter();
+  // This to be populated by a service
+  shoppingList: string[] = ['curry', 'bazil pesto chicken pasta', 'groceries']
 
   ngOnInit(): void {
   }
 
-  changeCountry() {
+  selectedList() {
+    this.messageBus.emit(this.tester);
     console.log(this.tester);
   }
 
